@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" width="1200" height="24">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <style>
+    .spark { animation: run 4s ease-in-out infinite; }
+    @keyframes run { 0% { transform: translateX(0); opacity: 0 } 15%,85% { opacity: 1 } 100% { transform: translateX(1000px); opacity: 0 } }
+  </style>
+  <rect x="0" y="11" width="1200" height="2" rx="1" fill="#30363d"/>
+  <g class="spark">
+    <circle cx="100" cy="12" r="7" fill="#8b5cf6" filter="url(#glow)"/>
+    <circle cx="100" cy="12" r="3" fill="#ffffff"/>
+  </g>
+</svg>

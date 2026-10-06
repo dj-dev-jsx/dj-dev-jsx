@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#8b5cf6" flood-opacity=".2"/>
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace; }
+    .cmd  { font-size: 19px; fill: #e6edf3; }
+    .p    { fill: #a78bfa; font-weight: 700; }
+    .out  { font-size: 17px; fill: #8b949e; opacity: 0; }
+    .ok   { fill: #3fb950; }
+    .k    { fill: #f0abfc; }
+    .s    { fill: #79c0ff; }
+    .bar  { font-size: 14px; fill: #8b949e; }
+    .o1 { animation: show .4s ease-out 1.6s forwards; }
+    .o2 { animation: show .4s ease-out 3.3s forwards; }
+    .o3 { animation: show .4s ease-out 4.8s forwards; }
+    .o4 { animation: show .4s ease-out 6.3s forwards; }
+    .final { opacity: 0; animation: show .4s ease-out 6.9s forwards; }
+    @keyframes show { from { opacity: 0; transform: translateX(-8px) } to { opacity: 1; transform: translateX(0) } }
+    .cover { transform-box: fill-box; transform-origin: right; animation: reveal 1s steps(14) forwards; }
+    .t1 { animation-delay: .4s } .t2 { animation-delay: 2s } .t3 { animation-delay: 3.6s } .t4 { animation-delay: 5.1s }
+    @keyframes reveal { to { transform: scaleX(0) } }
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0 } }
+    .pulse { animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .5 } 50% { opacity: 1 } }
+  </style>
+
+  <!-- window -->
+  <rect x="10" y="10" width="840" height="400" rx="16" fill="#0d1117" stroke="#30363d" stroke-width="2" filter="url(#shadow)"/>
+  <path d="M10 26a16 16 0 0 1 16-16h808a16 16 0 0 1 16 16v20H10z" fill="#161b22"/>
+  <circle cx="38" cy="30" r="7" fill="#ff5f57"/>
+  <circle cx="62" cy="30" r="7" fill="#febc2e"/>
+  <circle cx="86" cy="30" r="7" fill="#28c840"/>
+  <text class="mono bar" x="430" y="35" text-anchor="middle">dj@dev: ~/portfolio — zsh</text>
+
+  <!-- line 1 -->
+  <text class="mono cmd" x="40" y="92"><tspan class="p">❯</tspan> whoami</text>
+  <rect class="cover t1" x="36" y="70" width="440" height="30" fill="#0d1117"/>
+  <text class="mono out o1" x="64" y="122">Dj — <tspan class="k">Junior Software Engineer</tspan> from the Philippines 🌏</text>
+
+  <!-- line 2 -->
+  <text class="mono cmd" x="40" y="156"><tspan class="p">❯</tspan> cat stack.json</text>
+  <rect class="cover t2" x="36" y="134" width="440" height="30" fill="#0d1117"/>
+  <text class="mono out o2" x="64" y="186">{ <tspan class="s">"web"</tspan>: React · Next.js · Node · Laravel, <tspan class="s">"mobile"</tspan>: React Native }</text>
+
+  <!-- line 3 -->
+  <text class="mono cmd" x="40" y="220"><tspan class="p">❯</tspan> ./learning.sh</text>
+  <rect class="cover t3" x="36" y="198" width="440" height="30" fill="#0d1117"/>
+  <text class="mono out o3" x="64" y="250">→ System Design · DevOps · Cloud · API Design</text>
+
+  <!-- line 4 -->
+  <text class="mono cmd" x="40" y="284"><tspan class="p">❯</tspan> git push origin future</text>
+  <rect class="cover t4" x="36" y="262" width="440" height="30" fill="#0d1117"/>
+  <text class="mono out o4" x="64" y="314"><tspan class="ok">✔</tspan> Building • Learning • Experimenting — deployed 🚀</text>
+
+  <!-- prompt waiting -->
+  <g class="final">
+    <text class="mono cmd" x="40" y="360"><tspan class="p">❯</tspan> <tspan class="caret" fill="#a78bfa">▍</tspan></text>
+    <circle class="pulse" cx="808" cy="380" r="5" fill="#3fb950"/>
+    <text class="mono bar" x="796" y="385" text-anchor="end">online</text>
+  </g>
+</svg>

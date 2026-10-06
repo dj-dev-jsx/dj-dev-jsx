@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340">
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#21262d"/>
+    </pattern>
+    <clipPath id="frame"><rect x="1" y="1" width="1198" height="338" rx="14"/></clipPath>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace; }
+    .ln   { font-size: 16px; fill: #484f58; }
+    .tab  { font-size: 14px; }
+    .cmt  { font-size: 18px; fill: #8b949e; }
+    .name { font-size: 80px; font-weight: 700; fill: #e6edf3; }
+    .prm  { font-size: 80px; font-weight: 700; fill: #8b5cf6; }
+    .role { font-size: 22px; fill: #c9d1d9; }
+    .kw   { fill: #ff7b72; }
+    .str  { fill: #a5d6ff; }
+    .fn   { fill: #d2a8ff; }
+
+    .fade { opacity: 0; animation: in .6s ease-out forwards; }
+    @keyframes in { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+
+    .cover { transform-box: fill-box; transform-origin: right; animation: reveal 1.3s steps(11) .6s forwards; }
+    @keyframes reveal { to { transform: scaleX(0) } }
+    .cursor { opacity: 0; animation: show 0s 1.9s forwards, blink 1s steps(1) 1.9s infinite; }
+    @keyframes show  { to { opacity: 1 } }
+    @keyframes blink { 50% { opacity: 0 } }
+
+    .bg { font-size: 13px; fill: #161b22; }
+    .scroll { animation: up 30s linear infinite; }
+    @keyframes up { to { transform: translateY(-240px) } }
+
+    .status { animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .4 } 50% { opacity: 1 } }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <!-- background -->
+    <rect width="1200" height="340" fill="#0d1117"/>
+    <rect width="1200" height="340" fill="url(#dots)"/>
+
+    <!-- faint code on the right -->
+    <g class="scroll mono bg">
+      <text x="860" y="90">import { ideas } from "./brain";</text>
+      <text x="860" y="130">const app = express();</text>
+      <text x="860" y="170">app.listen(3000);</text>
+      <text x="860" y="210">git commit -m "ship it"</text>
+      <text x="860" y="250">php artisan migrate</text>
+      <text x="860" y="290">npm run build</text>
+      <text x="860" y="330">import { ideas } from "./brain";</text>
+      <text x="860" y="370">const app = express();</text>
+      <text x="860" y="410">app.listen(3000);</text>
+      <text x="860" y="450">git commit -m "ship it"</text>
+      <text x="860" y="490">php artisan migrate</text>
+      <text x="860" y="530">npm run build</text>
+    </g>
+
+    <!-- editor tab bar -->
+    <rect width="1200" height="44" fill="#161b22"/>
+    <line x1="0" y1="44" x2="1200" y2="44" stroke="#30363d"/>
+    <circle cx="26" cy="22" r="6" fill="#ff5f57"/>
+    <circle cx="46" cy="22" r="6" fill="#febc2e"/>
+    <circle cx="66" cy="22" r="6" fill="#28c840"/>
+    <rect x="96" y="6" width="150" height="38" fill="#0d1117"/>
+    <rect x="96" y="6" width="150" height="2" fill="#8b5cf6"/>
+    <text class="mono tab" x="171" y="30" text-anchor="middle" fill="#e6edf3">hello.ts</text>
+    <text class="mono tab" x="300" y="30" text-anchor="middle" fill="#6e7681">about.md</text>
+    <text class="mono tab" x="410" y="30" text-anchor="middle" fill="#6e7681">stack.json</text>
+
+    <!-- gutter -->
+    <line x1="110" y1="44" x2="110" y2="340" stroke="#21262d"/>
+    <g class="mono ln" text-anchor="end">
+      <text x="90" y="90">1</text>
+      <text x="90" y="186">2</text>
+      <text x="90" y="246">3</text>
+      <text x="90" y="296">4</text>
+    </g>
+
+    <!-- line 1: comment -->
+    <text class="mono cmt fade" x="150" y="90" style="animation-delay:.1s">// welcome to my profile 👋</text>
+
+    <!-- line 2: typed name -->
+    <text class="mono" x="150" y="186" textLength="540" lengthAdjust="spacingAndGlyphs"><tspan class="prm">&gt;</tspan><tspan class="name" dx="20">Hi, I'm Dj</tspan></text>
+    <rect class="cover" x="146" y="118" width="556" height="96" fill="#0d1117"/>
+    <rect class="cursor" x="706" y="128" width="36" height="70" fill="#8b5cf6"/>
+
+    <!-- line 3: role as code -->
+    <text class="mono role fade" x="150" y="246" style="animation-delay:2.1s"><tspan class="kw">const</tspan> role = <tspan class="str">"Junior Software Engineer"</tspan>;</text>
+
+    <!-- line 4: stack call -->
+    <text class="mono role fade" x="150" y="296" style="animation-delay:2.5s"><tspan class="fn">build</tspan>(<tspan class="str">"web"</tspan>, <tspan class="str">"api"</tspan>, <tspan class="str">"mobile"</tspan>);</text>
+
+    <!-- status bar -->
+    <rect y="316" width="1200" height="24" fill="#8b5cf6"/>
+    <circle class="status" cx="20" cy="328" r="4" fill="#ffffff"/>
+    <text class="mono" x="32" y="333" font-size="12" fill="#ffffff">main</text>
+    <text class="mono" x="1180" y="333" font-size="12" fill="#ffffff" text-anchor="end">TypeScript · UTF-8 · Philippines</text>
+  </g>
+
+  <rect x="1" y="1" width="1198" height="338" rx="14" fill="none" stroke="#30363d" stroke-width="2"/>
+</svg>
