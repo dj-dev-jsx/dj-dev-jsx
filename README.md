@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="Hi, I'm Dj — Junior Software Engineer" />
+<img src="./assets/hero.svg" width="100%" alt="Hi, I'm Dj — Developer" />
 
 <a href="https://github.com/dj-dev-jsx">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=2800&pause=800&color=8B5CF6&center=true&vCenter=true&width=600&lines=Full-Stack+Developer;Building+things+with+code;Always+learning%2C+always+building." alt="Typing SVG" />
