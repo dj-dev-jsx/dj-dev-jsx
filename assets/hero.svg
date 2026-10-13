@@ -77,9 +77,6 @@
       <text x="90" y="296">4</text>
     </g>
 
-    <!-- line 1: comment -->
-    <text class="mono cmt fade" x="150" y="90" style="animation-delay:.1s">// welcome to my profile 👋</text>
-
     <!-- line 2: typed name -->
     <text class="mono" x="150" y="186" textLength="540" lengthAdjust="spacingAndGlyphs"><tspan class="prm">&gt;</tspan><tspan class="name" dx="20">Hi, I'm Dj</tspan></text>
     <rect class="cover" x="146" y="118" width="556" height="96" fill="#0d1117"/>
