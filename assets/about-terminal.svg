@@ -50,7 +50,7 @@
   <!-- line 3 -->
   <text class="mono cmd" x="40" y="220"><tspan class="p">❯</tspan> ./learning.sh</text>
   <rect class="cover t3" x="36" y="198" width="440" height="30" fill="#0d1117"/>
-  <text class="mono out o3" x="64" y="250">→ Open Source Projects · DevOps · Linux · Cloud</text>
+  <text class="mono out o3" x="64" y="250">→ Open Source Projects · DevOps · Linux · Cloud · AI Integration</text>
 
   <!-- line 4 -->
   <text class="mono cmd" x="40" y="284"><tspan class="p">❯</tspan> git push origin future</text>
